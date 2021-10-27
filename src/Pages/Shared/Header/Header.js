@@ -35,7 +35,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/blog" className='fw-bold text-dark'>
                                 Blog
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/register" className="btn btn-dark rounded text-light px-4">
+                            <Nav.Link as={Link} to="/admin" className="btn btn-dark rounded text-light px-4">
                                 Admin
                             </Nav.Link>
                             {

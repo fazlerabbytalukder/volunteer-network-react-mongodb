@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
+import Admin from './Pages/Home/Admin/Admin';
 import Home from './Pages/Home/Home/Home';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 import RegisterVolnteer from './Pages/Home/RegisterVolunteer/RegisterVolnteer';
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path='/register'>
               <Register></Register>
+            </Route>
+            <Route path='/admin'>
+              <Admin></Admin>
             </Route>
             <PrivateRoute path='/services/:serviceId'>
               <RegisterVolnteer></RegisterVolnteer>
