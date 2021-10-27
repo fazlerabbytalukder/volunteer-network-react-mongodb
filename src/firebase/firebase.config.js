@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBg1a2GKjhS6FwsBfyxL0HkZHKwLBzBCbM",
-    authDomain: "simple-firebase-authenti-fe1b0.firebaseapp.com",
-    projectId: "simple-firebase-authenti-fe1b0",
-    storageBucket: "simple-firebase-authenti-fe1b0.appspot.com",
-    messagingSenderId: "689989851259",
-    appId: "1:689989851259:web:307998c9a183862202aade"
+    apiKey: "AIzaSyCxe_ShVoA03kTsBXU66-zp2TMGYJFVboM",
+    authDomain: "hot-onion-26497.firebaseapp.com",
+    projectId: "hot-onion-26497",
+    storageBucket: "hot-onion-26497.appspot.com",
+    messagingSenderId: "1033235846192",
+    appId: "1:1033235846192:web:fd8d94502d58eb288209f5"
 };
 
 export default firebaseConfig;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import {  useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
 import './RegisterVolunteer.css';
@@ -47,11 +47,9 @@ const RegisterVolnteer = () => {
                     <input defaultValue={user.displayName} {...register("name")} />
                     <input defaultValue={user.email} {...register("email", { required: true })} />
                     {errors.email && <span className="error">This field is required</span>}
-                    <input defaultValue={services.title} {...register("Servive name")} />
-                    <input placeholder="Address" defaultValue="" {...register("address")} />
-                    <input placeholder="City" defaultValue="" {...register("city")} />
-                    <input placeholder="phone number" defaultValue="" {...register("phone")} />
-
+                    <input defaultValue={services.title} {...register("servive")} />
+                    <input placeholder='date' type='date' {...register("date")}/>
+                    <textarea placeholder="Description"  type='textarea' className='w-100 mt-4 rounded' {...register("description")}/>
                     <input type="submit" />
                 </form>
             </div>
