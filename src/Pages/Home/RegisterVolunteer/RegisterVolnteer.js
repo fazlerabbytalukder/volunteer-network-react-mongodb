@@ -11,7 +11,7 @@ const RegisterVolnteer = () => {
         fetch(`http://localhost:5000/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServices(data));
-    }, [])
+    }, [serviceId])
 
 
 
@@ -41,13 +41,15 @@ const RegisterVolnteer = () => {
 
     return (
         <div>
-            <h2 className='text-center mt-5'>Register Ss a volunteer</h2>
+            <h2 className='text-center mt-5'>Register as a volunteer</h2>
             <div className='d-flex justify-content-center align-items-center'>
                 <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={user.displayName} {...register("name")} />
                     <input defaultValue={user.email} {...register("email", { required: true })} />
                     {errors.email && <span className="error">This field is required</span>}
-                    <input defaultValue={services.title} {...register("servive")} />
+                    {
+                        services.title && <input defaultValue={services.title} {...register("service")} />
+                    }
                     <input placeholder='date' type='date' {...register("date")}/>
                     <textarea placeholder="Description"  type='textarea' className='w-100 mt-4 rounded' {...register("description")}/>
                     <input type="submit" />
