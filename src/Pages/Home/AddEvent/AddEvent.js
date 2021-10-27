@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const AddEvent = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/services', {
+        fetch('https://infinite-fortress-64339.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

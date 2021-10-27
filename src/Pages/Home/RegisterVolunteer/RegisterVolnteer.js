@@ -8,7 +8,7 @@ const RegisterVolnteer = () => {
     const [services, setServices] = useState([]);
     const { serviceId } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://infinite-fortress-64339.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServices(data));
     }, [serviceId])
@@ -22,7 +22,7 @@ const RegisterVolnteer = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        fetch('http://localhost:5000/regUser', {
+        fetch('https://infinite-fortress-64339.herokuapp.com/regUser', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
