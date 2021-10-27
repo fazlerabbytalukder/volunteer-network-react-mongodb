@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import Admin from './Pages/Home/Admin/Admin';
 import Home from './Pages/Home/Home/Home';
+import MyEvents from './Pages/Home/MyEvents/MyEvents';
 import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 import RegisterVolnteer from './Pages/Home/RegisterVolunteer/RegisterVolnteer';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='/myEvents/:email'>
+              <MyEvents></MyEvents>
             </Route>
             <Route path='/register'>
               <Register></Register>
