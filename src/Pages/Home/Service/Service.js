@@ -1,13 +1,21 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import './Service.css';
 
+
+
 const Service = (props) => {
-    const { title, img } = props.service;
+    const { _id, title, img } = props.service;
+    const history = useHistory();
+
+    const handleEventClick = () => {
+        history.push(`/services/${_id}`);
+    }
     return (
         <div>
             <Col>
-                <Card className='shadow h-100 service-card rounded'>
+                <Card onClick={handleEventClick} className='shadow h-100 service-card rounded'>
                     <Card.Img className='mx-auto service-img' variant="top" src={img} />
                     <Card.Body>
                         <Card.Title className='text-center'>{title}</Card.Title>
