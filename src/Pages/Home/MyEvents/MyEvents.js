@@ -7,7 +7,7 @@ const MyEvents = () => {
     const [myEvents, setMyEvents] = useState([]);
     const { email } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/myEvent`)
+        fetch(`https://infinite-fortress-64339.herokuapp.com/myEvent`)
             .then(res => res.json())
             .then(data => setMyEvents(data.filter(vol => vol.email === email)));
     }, [email])

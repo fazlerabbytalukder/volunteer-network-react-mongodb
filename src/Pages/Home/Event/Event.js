@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const Event = ({ event }) => {
-    const [volunteers, setVolunteers] = useState([]);
+    const [myEvents, setMyEvents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/myEvent')
+        fetch('https://infinite-fortress-64339.herokuapp.com/myEvent')
             .then(res => res.json())
-            .then(data => setVolunteers(data))
+            .then(data => setMyEvents(data))
     }, []);
+
+
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/myEvent/${id}`;
+            const url = `https://infinite-fortress-64339.herokuapp.com/myEvent/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -19,8 +21,8 @@ const Event = ({ event }) => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('deleted successfully');
-                        const remainingVolunteers = volunteers.filter(volunteer => volunteer._id !== id);
-                        setVolunteers(remainingVolunteers);
+                        const remainingVolunteers = myEvents.filter(volunteer => volunteer._id !== id);
+                        setMyEvents(remainingVolunteers);
                         // window.reload();
                         window.location.reload();
                     }
