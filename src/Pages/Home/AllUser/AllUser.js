@@ -32,8 +32,6 @@ const AllUser = (props) => {
 
     const { _id,service,name,email,date } = props.user;
     return (
-        <div>
-            <table className="table">
                 <tbody>
                     <tr className='text-center'>
                         <th>{name}</th>
@@ -43,8 +41,7 @@ const AllUser = (props) => {
                         <td><button onClick={()=>handleDelete(_id)} className='btn btn-secondary'>Delete</button></td>
                     </tr>
                 </tbody>
-            </table>
-        </div>
+                
     );
 };
 
