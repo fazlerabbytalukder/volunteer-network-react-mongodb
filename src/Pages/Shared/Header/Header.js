@@ -29,7 +29,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/donation" className='fw-bold text-dark'>
                                 Donation
                             </Nav.Link>
-                            <Nav.Link as={Link} to={`/myEvents/${user.email}`} className='fw-bold text-dark'>
+                            <Nav.Link as={Link} to={`/myEvents/${user.uid}`} className='fw-bold text-dark'>
                                 Events
                             </Nav.Link>
                             <Nav.Link as={Link} to="/blog" className='fw-bold text-dark'>

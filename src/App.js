@@ -27,7 +27,7 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <Route path='/myEvents/:email'>
+            <Route path='/myEvents/:uid'>
               <MyEvents></MyEvents>
             </Route>
             <Route path='/register'>

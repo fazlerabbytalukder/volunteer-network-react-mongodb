@@ -14,14 +14,13 @@ const RegisterVolnteer = () => {
     }, [serviceId])
 
 
-
-
-
-
-
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
+
     const onSubmit = data => {
+        data.uid = user.uid;
+        data.img = services.img;
+
         fetch('https://infinite-fortress-64339.herokuapp.com/regUser', {
             method: 'POST',
             headers: {
