@@ -4,7 +4,7 @@ import AllUser from '../AllUser/AllUser';
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/myEvent')
+        fetch('https://infinite-fortress-64339.herokuapp.com/myEvent')
             .then(res => res.json())
             .then(data => setUsers(data));
     },[])
